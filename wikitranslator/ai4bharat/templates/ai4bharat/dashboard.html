@@ -1,0 +1,16 @@
+<!-- the summary page inherits from the base -->
+{% extends 'ai4bharat/base.html' %}
+
+
+
+{% block content %}
+
+<form action="dashboard">
+<!-- this will display the searched title -->
+
+{%for project in projects%}
+<a href="/summary?search={{ project.title }}&langs={{ project.language }}">{{ project.language }}_{{ project.title }}</a>
+<br>
+{% endfor %}
+</form>
+{% endblock %}

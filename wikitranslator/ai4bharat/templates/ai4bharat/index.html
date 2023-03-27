@@ -1,0 +1,40 @@
+<!-- the index page is inheriting from the base page -->
+<!-- the extends tags are used for inheriting from the base page -->
+{% extends 'ai4bharat/base.html' %}
+
+<!-- the block content tags for containing content of the page -->
+{%  block content %}
+
+<form action="summary">
+    <div class="input-group">
+        <input type="text" required class="form-control" name="search" placeholder="Please Enter The Wikipedia Article Title.......">
+        <div class="input-group-append">
+            <button class="btn btn-success" type="submit">
+                Search
+            </button>
+        </div>
+	  <div>
+
+			<label for="langs">Choose a language:</label>
+			<select name="langs" id="langs">
+  			<option value="bn">Bengali</option>
+		      <option value="gu">Gujarati</option>
+		      <option value="hi">Hindi</option>
+		      <option value="kn">Kannada</option>
+			<option value="ml">Malayalam</option>
+			<option value="mr">Marathi</option>
+			<option value="ne">Nepali</option>
+			<option value="or">Oriya</option>
+			<option value="pa">Punjabi</option>
+			<option value="si">Sinhala</option>
+			<option value="ta">Tamil</option>
+			<option value="te">Telugu</option>
+			<option value="ur">Urdu</option>
+			</select>
+
+	  </div>
+    </div>
+
+</form>
+
+{% endblock %}

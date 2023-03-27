@@ -1,0 +1,31 @@
+<!-- the summary page inherits from the base -->
+{% extends 'ai4bharat/base.html' %}
+
+
+
+{% block content %}
+
+<form action="summary">
+<!-- this will display the searched title -->
+<h4>{{ title }}</h4>
+
+
+<!-- this will display the summary -->
+<p>{{ summary }}</p>
+
+<p>
+{%for sentence in sentences%}
+<label>{{sentence}}</label>
+<input type="text" id= "{{ forloop.counter }}" name= "{{ sentence }}">
+<br>
+{% endfor %}
+</p>
+<div class="input-group-append">
+            <button class="btn btn-success" type="submit">
+                Update
+            </button>
+        </div>
+
+</form>
+{% endblock %}
+
